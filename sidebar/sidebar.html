@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>产品工作流截图工具</title>
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+  <div class="sidebar-container">
+    <!-- 头部 -->
+    <header class="sidebar-header">
+      <h1 class="header-title">📷 产品工作流截图</h1>
+    </header>
+
+    <!-- 功能节点区域 -->
+    <section class="features-section">
+      <div class="section-header">
+        <h2 class="section-title">📁 功能节点</h2>
+        <button class="btn btn-primary btn-sm" id="btn-new-feature">+ 新建</button>
+      </div>
+      <div class="feature-tree" id="feature-tree">
+        <div class="empty-state">暂无功能节点，点击"新建"创建</div>
+      </div>
+    </section>
+
+    <!-- 截图预览区域 -->
+    <section class="screenshots-section">
+      <div class="section-header">
+        <h2 class="section-title">📸 截图预览</h2>
+        <div class="view-toggle">
+          <button class="btn btn-icon active" id="btn-grid-view" title="网格视图">▦</button>
+          <button class="btn btn-icon" id="btn-list-view" title="列表视图">☰</button>
+        </div>
+      </div>
+      <div class="screenshots-info" id="screenshots-info"></div>
+      <div class="screenshots-grid" id="screenshots-grid">
+        <div class="empty-state">选择功能节点查看截图</div>
+      </div>
+    </section>
+
+    <!-- 操作区域 -->
+    <footer class="sidebar-footer">
+      <button class="btn btn-secondary" id="btn-capture-page">截取页面</button>
+      <button class="btn btn-secondary" id="btn-select-element">选择元素</button>
+      <button class="btn btn-primary" id="btn-export">📤 导出</button>
+    </footer>
+
+    <!-- 存储统计 -->
+    <div class="storage-stats" id="storage-stats"></div>
+  </div>
+
+  <!-- 新建功能模态框 -->
+  <div class="modal" id="modal-new-feature">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-feature-title">新建功能节点</h3>
+        <button class="btn btn-icon modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="feature-name">功能名称</label>
+          <input type="text" id="feature-name" class="form-input" placeholder="输入功能名称">
+        </div>
+        <input type="hidden" id="feature-parent" value="">
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-cancel">取消</button>
+        <button class="btn btn-primary" id="btn-create-feature">创建</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 大图预览模态框 -->
+  <div class="modal" id="modal-preview">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content modal-large">
+      <div class="modal-header">
+        <h3 id="preview-title">截图预览</h3>
+        <button class="btn btn-icon modal-close">&times;</button>
+      </div>
+      <div class="modal-body preview-body">
+        <img id="preview-image" src="" alt="截图预览">
+      </div>
+      <div class="modal-footer">
+        <div class="preview-info" id="preview-info"></div>
+        <div class="preview-actions">
+          <button class="btn btn-secondary" id="btn-prev-screenshot">← 上一张</button>
+          <button class="btn btn-secondary" id="btn-next-screenshot">下一张 →</button>
+          <button class="btn btn-danger" id="btn-delete-screenshot">删除</button>
+          <button class="btn btn-primary" id="btn-download-screenshot">下载</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 确认对话框 -->
+  <div class="modal" id="modal-confirm">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content modal-small">
+      <div class="modal-header">
+        <h3>确认</h3>
+      </div>
+      <div class="modal-body">
+        <p id="confirm-message">确定要执行此操作吗？</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary modal-cancel">取消</button>
+        <button class="btn btn-danger" id="btn-confirm">确定</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast 通知 -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="sidebar.js"></script>
+</body>
+</html>

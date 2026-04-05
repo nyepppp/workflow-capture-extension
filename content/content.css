@@ -1,0 +1,19 @@
+/**
+ * 内容脚本样式
+ */
+
+/* 确保扩展元素不受页面样式影响 */
+#wfc-floating-button,
+#wfc-selection-overlay,
+#wfc-highlight-box,
+#wfc-toast {
+  box-sizing: border-box !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* 高亮元素样式 */
+.wfc-highlight-element {
+  outline: 3px solid #1a73e8 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.2) !important;
+}

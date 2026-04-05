@@ -1,0 +1,54 @@
+{
+  "extensionName": {
+    "message": "产品工作流截图工具",
+    "description": "扩展名称"
+  },
+  "extensionDescription": {
+    "message": "帮助产品团队快速捕获、组织和管理产品工作流截图",
+    "description": "扩展描述"
+  },
+  "newFeature": {
+    "message": "新建功能",
+    "description": "新建功能按钮"
+  },
+  "capturePage": {
+    "message": "截取整个页面",
+    "description": "截取整个页面按钮"
+  },
+  "selectElement": {
+    "message": "选择元素截图",
+    "description": "选择元素截图按钮"
+  },
+  "exportLocal": {
+    "message": "导出到本地",
+    "description": "导出按钮"
+  },
+  "deleteConfirm": {
+    "message": "确定要删除吗？此操作不可撤销。",
+    "description": "删除确认提示"
+  },
+  "screenshotSaved": {
+    "message": "截图已保存",
+    "description": "截图保存成功提示"
+  },
+  "screenshotFailed": {
+    "message": "截图失败",
+    "description": "截图失败提示"
+  },
+  "selectModeHint": {
+    "message": "点击页面元素进行截图 (按 ESC 取消)",
+    "description": "选择模式提示"
+  },
+  "noFeatureSelected": {
+    "message": "请先选择一个功能节点",
+    "description": "未选择功能节点提示"
+  },
+  "exportComplete": {
+    "message": "导出完成",
+    "description": "导出完成提示"
+  },
+  "cleanupConfirm": {
+    "message": "导出完成！是否清理已导出的数据以释放空间？",
+    "description": "导出后清理确认"
+  }
+}
