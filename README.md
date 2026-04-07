@@ -1,6 +1,7 @@
 # 产品工作流截图工具
 
 Chrome/Edge 浏览器扩展，帮助产品团队快速捕获、组织和管理产品工作流截图。
+<img width="2880" height="1599" alt="image" src="https://github.com/user-attachments/assets/7263b997-ad08-4718-8e77-5162489d9740" />
 
 ## 安装方法
 
